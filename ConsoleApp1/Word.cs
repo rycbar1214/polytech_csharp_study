@@ -11,7 +11,7 @@ public class Word
         return word[i] == 'a';
     }
     
-    //i번째 글자가 자음인지 알려주는 IsConsonant()함수
+    //i번째 글자가 자음인지 알려주는 IsConsonant() 함수 수정
 
     public bool IsConsonant(int i)
     {
