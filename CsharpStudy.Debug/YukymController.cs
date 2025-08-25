@@ -71,7 +71,7 @@ public class YukymController
             return timeDataOne.First().Ty5;
         } else if (nowTime.Hour >= 12 && nowTime.Hour < 14) {
             return timeDataOne.First().Ty6;
-        } else if (nowTime.Hour >= 16 || nowTime.Hour < 18) {
+        } else if (nowTime.Hour >= 16 && nowTime.Hour < 18) {
             return timeDataOne.First().Ty7;
         } else if (nowTime.Hour >= 18 && nowTime.Hour < 20) {
             return timeDataOne.First().Ty8;
