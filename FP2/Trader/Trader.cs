@@ -66,6 +66,11 @@ public class MainClass
             .ForEach(Console.WriteLine);
          
          //4. 모든 거래자의 이름을 알파벳순으로 정렬하여 나열하시오
+         transactions.Select(transaction=>transaction.Trader.Name)
+            .OrderBy(transaction=>transaction)
+            .ToList()
+            .ForEach(Console.WriteLine);
+
          
          //5. 밀라노에 거래자가 있는가?
          
