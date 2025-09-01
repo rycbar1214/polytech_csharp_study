@@ -52,27 +52,29 @@ public class MainClass
          
          //2.거래자가 근무하는 모든 도시를 중복 없이 나열하시오
          transactions.Select(transaction=>transaction.Trader.City)
-            .ToHashSet()
+            .Distinct()
             .ToList()
             .ForEach(Console.WriteLine);
          
          
          //3. 케임브리지에서 근무하는 모든 거래자를 찾아서 이름순으로 정렬하여 나열하시오
          transactions.Where(transaction=>transaction.Trader.City=="Cambridge")
-            .OrderBy(transaction => transaction.Trader.Name )
             .Select(transaction => transaction.Trader.Name)
-            .ToHashSet()
+            .Distinct()
+            .OrderBy(name => name )
             .ToList()
             .ForEach(Console.WriteLine);
          
          //4. 모든 거래자의 이름을 알파벳순으로 정렬하여 나열하시오
          transactions.Select(transaction=>transaction.Trader.Name)
-            .OrderBy(transaction=>transaction)
+            .Distinct()
+            .OrderBy(name => name )
             .ToList()
             .ForEach(Console.WriteLine);
          
          //5. 밀라노에 거래자가 있는가?
          Console.WriteLine(transactions.Any(transaction => transaction.Trader.City == "Milan" ));
+         
          //6. 케임브리지에 거주하는 거래자의 모든 트랜잭션 값을 출력하시오
          transactions.Where(transaction => transaction.Trader.City == "Cambridge" )
             .Select(transaction => transaction.Value)
@@ -80,13 +82,11 @@ public class MainClass
             .ForEach(Console.WriteLine);
          
          //7. 전체 트랜잭션 중 최대값은 얼마인가?
-         int Max=transactions.Select(transaction => transaction.Value )
-            .Aggregate((a,b)=>Math.Max(a,b));
-         Console.WriteLine(Max);
+       
+         Console.WriteLine(transactions.Max(transaction =>transaction.Value ));
          
          //8. 전체 트랜잭션 중 최소값은 얼마인가
-         int Min=transactions.Select(transaction =>transaction.Value )
-            .Aggregate((a,b)=>Math.Min(a, b));
-         Console.WriteLine(Min);
+         
+         Console.WriteLine(transactions.Min(transaction =>transaction.Value ));
       }
    }
