@@ -74,6 +74,10 @@ public class MainClass
          //5. 밀라노에 거래자가 있는가?
          Console.WriteLine(transactions.Any(transaction => transaction.Trader.City == "Milan" ));
          //6. 케임브리지에 거주하는 거래자의 모든 트랜잭션 값을 출력하시오
+         transactions.Where(transaction => transaction.Trader.City == "Cambridge" )
+            .Select(transaction => transaction.Value)
+            .ToList()
+            .ForEach(Console.WriteLine);
          
          //7. 전체 트랜잭션 중 최대값은 얼마인가?
          
