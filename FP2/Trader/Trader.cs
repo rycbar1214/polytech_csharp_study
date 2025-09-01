@@ -80,7 +80,13 @@ public class MainClass
             .ForEach(Console.WriteLine);
          
          //7. 전체 트랜잭션 중 최대값은 얼마인가?
+         int Max=transactions.Select(transaction => transaction.Value )
+            .Aggregate((a,b)=>Math.Max(a,b));
+         Console.WriteLine(Max);
          
-         //8. 전체 트랜잭션 중 최소값은 얼마인가?
+         //8. 전체 트랜잭션 중 최소값은 얼마인가
+         int Min=transactions.Select(transaction =>transaction.Value )
+            .Aggregate((a,b)=>Math.Min(a, b));
+         Console.WriteLine(Min);
       }
    }
