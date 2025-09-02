@@ -11,12 +11,11 @@ public class Company
 {
     static void Main(string[] args)
     {
-        Company.Employee employees = new Company.Employee("홍길동", 41);
-        Company.Department department = new
-            Company.Department("홍길동", employee);
+        Employee employees = new Employee("홍길동", 41);
+        Department department = new Department("총무부", employee);
 
-        string jsonString = JsonConvert.SerializeObject(department);
-        File.WriteAllText("department.json", jsonString);
+        string jsonString = JsonConvert.SerializeObject(department, Formatting.Indented);
+        File.WriteAllText("company.json", jsonString);
     }
     
     public class Employee
