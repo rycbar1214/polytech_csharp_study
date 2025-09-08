@@ -10,21 +10,31 @@ namespace JsonSerialization;
  모든 새소리가 끝나면 프로그램이 종료되어야 합니다*/
 public class Practice
 {
-    public static async Task<string> First()
+    public static async Task First()
     {
-        await Task.Delay(1000);
-        return "꾸우";
+        for (int i = 0; i < 4; i++)
+        {
+            await Task.Delay(1000);
+            Console.WriteLine("꾸우");
+        }
     }
     
-    public static async Task<string> Second()
+    public static async Task Second()
     {
-        await Task.Delay(2000);
-        return "까악";
+        for (int i = 0; i < 4; i++)
+        {
+            await Task.Delay(2000);
+            Console.WriteLine("까악");
+        }
+        
     }
     
-    public static async Task<string> Last()
+    public static async Task Last()
     {
-        await Task.Delay(3000);
-        return "짹짹";
+        for (int i = 0; i < 4; i++)
+        {
+            await Task.Delay(3000);
+            Console.WriteLine("짹짹");
+        }
     }
 }
