@@ -3,6 +3,19 @@
 //다음 코드가 수행되도록 JsonFileDataSource를 구현
 class Program
 {
+   internal interface IDataSource
+   {
+      Task<List<Person>> GetPeopleAsync();
+      Task SavePeopleAsync(List<Person> people);
+   }
+
+   public class Person
+   {
+      public string Name { get; set; }
+      
+      public int Age { get; set; }
+   }
+   
    static async Task Main(string[] args)
    {
       IDataSource dataSource=new JsonFileDataSource("people.json");
@@ -28,3 +41,4 @@ class Program
       }
    }
 }
+
