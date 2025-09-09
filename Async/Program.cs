@@ -2,22 +2,26 @@
 
 //다음 코드가 수행되도록 JsonFileDataSource를 구현
 
-class Program
+public interface IDataSource
 {
-   public interface IDataSource
-   {
-      Task<List<Person>> GetPeopleAsync();
-      Task SavePeopleAsync(List<Person> people);
+   Task<List<Person>> GetPeopleAsync();
+   Task SavePeopleAsync(List<Person> people);
     
-   }
+}
    
    public class Person
    {
       public string Name { get; set; }
-      
       public int Age { get; set; }
    }
    
+   public class JsonFileDataSource : IDataSource
+   {
+    
+   }
+
+   class Program
+   {
    static async Task Main(string[] args)
    {
       IDataSource dataSource=new JsonFileDataSource("people.json");
