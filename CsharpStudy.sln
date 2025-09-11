@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSerialization", "JsonSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async", "Async\Async.csproj", "{D1B8F3C9-3469-409D-97C4-E8FDF7CD43F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "250911_MR", "250911_MR\250911_MR.csproj", "{7BD5DE50-440C-4691-B5E9-5BB57C5E8E60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,9 @@ Global
 		{D1B8F3C9-3469-409D-97C4-E8FDF7CD43F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1B8F3C9-3469-409D-97C4-E8FDF7CD43F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1B8F3C9-3469-409D-97C4-E8FDF7CD43F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD5DE50-440C-4691-B5E9-5BB57C5E8E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BD5DE50-440C-4691-B5E9-5BB57C5E8E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD5DE50-440C-4691-B5E9-5BB57C5E8E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BD5DE50-440C-4691-B5E9-5BB57C5E8E60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
