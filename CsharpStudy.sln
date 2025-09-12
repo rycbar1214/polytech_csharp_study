@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async", "Async\Async.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "250911_MR", "250911_MR\250911_MR.csproj", "{7BD5DE50-440C-4691-B5E9-5BB57C5E8E60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsarpStudy.Http", "CsarpStudy.Http\CsarpStudy.Http.csproj", "{32B2FA09-9C8D-4E5C-BC8B-7B6A10B5AE8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpStudy.Http", "CsharpStudy.Http\CsharpStudy.Http.csproj", "{32B2FA09-9C8D-4E5C-BC8B-7B6A10B5AE8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
