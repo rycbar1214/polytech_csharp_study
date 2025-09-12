@@ -1,6 +1,6 @@
 namespace _250911_MR.Study1;
 
-public interface ItemDataSource
+public interface IItemDataSource
 {
     
     //아이템 데이터를 읽어오는 메서드
