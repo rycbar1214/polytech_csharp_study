@@ -2,5 +2,5 @@ namespace DtoMapper.DataSource;
 
 public interface IPokemonApiDataSource
 {
-    Task<Response<Pokemon>> GetPokemonAsync(string pokemonName);
+    Task<Response<PokemonDto>> GetPokemonAsync(string pokemonName);
 }

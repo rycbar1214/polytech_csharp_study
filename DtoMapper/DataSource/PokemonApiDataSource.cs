@@ -12,7 +12,7 @@ public class PokemonApiDataSource : IPokemonApiDataSource
         _httpClient = httpClient;
     }
 
-    public async Task<Response<Pokemon>> GetPokemonAsync(string pokemonName)
+    public async Task<Response<PokemonDto>> GetPokemonAsync(string pokemonName)
     {
         var response = await _httpClient.GetAsync($"{BaseUrl}/{pokemonName}");
 
@@ -23,10 +23,10 @@ public class PokemonApiDataSource : IPokemonApiDataSource
             header => string.Join(", ", header.Value)
         );
 
-        return new Response<Pokemon>(
+        return new Response<PokemonDto>(
             statusCode: (int)response.StatusCode,
             headers: headers,
-            body: JsonConvert.DeserializeObject<Pokemon>(jsonString)
+            body: JsonConvert.DeserializeObject<PokemonDto>(jsonString)
         );
     }
 }

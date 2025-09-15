@@ -4,39 +4,35 @@ namespace DtoMapper.Models;
 
 public class Pokemon
 {
-    public string Name { get; set; }
-    public string sprites {get; set;}
-    
+    public string Name { get; }
+    public string ImageUrl { get; }
+
+    public Pokemon(string name, string imageUrl)
+    {
+        Name = name;
+        ImageUrl = imageUrl;
+    }
+
+    protected bool Equals(Pokemon other)
+    {
+        return Name == other.Name && ImageUrl == other.ImageUrl;
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj is null) return false;
+        if (ReferenceEquals(this, obj)) return true;
+        if (obj.GetType() != GetType()) return false;
+        return Equals((Pokemon)obj);
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(Name, ImageUrl);
+    }
+
+    public override string ToString()
+    {
+        return $"{nameof(Name)}: {Name}, {nameof(ImageUrl)}: {ImageUrl}";
+    }
 }
-
-public class Sprites
-{
-    public Other other { get; set; }
-}
-
-public class Other
-{
-    [JsonProperty("official-artwork")]
-    public OfficialArtwork OfficialArtwork {get; set;}
-}
-
-/*public class PokemonSprites
-{
-    [JsonProperty("front_default")]
-    public string? OfficialArtworkUrl {get; set;}
-}
-
-public class OtherSprites
-{
-    [JsonProperty("official-artwork")]
-    public PokemonSprites? OfficialArtwork {get; set;}
-}
-
-public class Pokemon
-{
-    [JsonProperty("name")]
-    public string? Name {get; set;}
-
-    [JsonProperty("sprites")]
-    public OtherSprites? Sprites {get; set;}
-}*/

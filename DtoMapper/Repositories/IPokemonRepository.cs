@@ -1,6 +1,8 @@
+using DtoMapper.Models;
+
 namespace DtoMapper.Repositories;
 
 public interface IPokemonRepository
 {
-    Task<Models.Pokemon?> GetPokemonByNameAsync(string pokemonName);
+    Task<DtoMapper.Models.Pokemon?> GetPokemonByNameAsync(string pokemonName);
 }
