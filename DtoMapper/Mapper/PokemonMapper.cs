@@ -2,7 +2,7 @@ using DtoMapper;
 
 namespace DtoMapper.Mapper;
 
-public class PokemonMapper
+public static class PokemonMapper
 {
     public static Models.Pokemon ToModel(this PokemonDto dto)
     {

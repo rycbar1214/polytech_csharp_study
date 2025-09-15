@@ -1,5 +1,5 @@
 using DtoMapper.DataSource;
-using DtoMapper.Models;
+using DtoMapper.Mapper;
 
 namespace DtoMapper.Repositories;
 
