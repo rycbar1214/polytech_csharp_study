@@ -1,21 +1,19 @@
-﻿using Newtonsoft.Json;
-
-namespace DtoMapper.Models;
+﻿namespace DtoMapper.Models;
 
 public class Pokemon
 {
     public string Name { get; }
-    public string ImageUrl { get; }
+    public List<string> Types { get; }
 
-    public Pokemon(string name, string imageUrl)
+    public Pokemon(string name, List<string> types)
     {
         Name = name;
-        ImageUrl = imageUrl;
+        Types = types;
     }
 
     protected bool Equals(Pokemon other)
     {
-        return Name == other.Name && ImageUrl == other.ImageUrl;
+        return Name == other.Name && Types.SequenceEqual(other.Types);
     }
 
     public override bool Equals(object? obj)
@@ -28,11 +26,17 @@ public class Pokemon
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(Name, ImageUrl);
+        var hash = new HashCode();
+        hash.Add(Name);
+        foreach (var type in Types)
+        {
+            hash.Add(type);
+        }
+        return hash.ToHashCode();
     }
 
     public override string ToString()
     {
-        return $"{nameof(Name)}: {Name}, {nameof(ImageUrl)}: {ImageUrl}";
+        return $"{nameof(Name)}: {Name}, {nameof(Types)}: [{string.Join(", ", Types)}]";
     }
 }
