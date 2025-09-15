@@ -4,7 +4,7 @@ namespace Pokemon.Repositories;
 
 public class PokemonRepository : IPokemonRepository
 {
-    private readonly IPokemonApiDataSource _dataSource;
+    private IPokemonApiDataSource _dataSource;
 
     public PokemonRepository(IPokemonApiDataSource dataSource)
     {
@@ -13,7 +13,14 @@ public class PokemonRepository : IPokemonRepository
 
     public async Task<Pokemon?> GetPokemonByNameAsync(string pokemonName)
     {
-        var response = await _dataSource.GetPokemonAsync(pokemonName);
-        return response.Body;
+        try
+        {
+            var response = await _dataSource.GetPokemonAsync(pokemonName);
+            return response.Body;
+        }
+        catch (Exception e)
+        {
+            return null;
+        }
     }
 }
