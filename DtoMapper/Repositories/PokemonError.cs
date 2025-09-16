@@ -1,9 +1,9 @@
 namespace DtoMapper.Repositories;
 
-public enum PokemonError
+/*public enum PokemonError
 {
-    NetworkError,
+   NetworkError,
     NotFound,
     InvalidInput,
     UnknownError
-}
+}*/

@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon", "Pokemon\Pokemon.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DtoMapper", "DtoMapper\DtoMapper.csproj", "{54379D9D-A0FC-4DD6-88EA-7D1E5EBACB20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpStudy.DtoMapper.Tests", "CsharpStudy.DtoMapper.Tests\CsharpStudy.DtoMapper.Tests.csproj", "{237A5658-28A9-4CFC-88EA-BA966D584D01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,5 +98,9 @@ Global
 		{54379D9D-A0FC-4DD6-88EA-7D1E5EBACB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54379D9D-A0FC-4DD6-88EA-7D1E5EBACB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54379D9D-A0FC-4DD6-88EA-7D1E5EBACB20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{237A5658-28A9-4CFC-88EA-BA966D584D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237A5658-28A9-4CFC-88EA-BA966D584D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237A5658-28A9-4CFC-88EA-BA966D584D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237A5658-28A9-4CFC-88EA-BA966D584D01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

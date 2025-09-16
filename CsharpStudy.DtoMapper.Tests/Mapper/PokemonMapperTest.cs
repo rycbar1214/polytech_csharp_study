@@ -1,9 +1,9 @@
+using DtoMapper;
 using DtoMapper.Mapper;
 using DtoMapper.Models;
-using DtoMapper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CsharpStudy.Game.Tests.Mapper;
+namespace CsharpStudy.DtoMapper.Tests.Mapper;
 
 [TestClass]
 public class PokemonMapperTest

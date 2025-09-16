@@ -1,10 +1,28 @@
-using DtoMapper.Repositories;
+using DtoMapper.Models;
 
 namespace DtoMapper.Common;
 
-public abstract record Result<TData, TError>
+public enum PokemonError
 {
-    public sealed record Success(TData Data): Result<TData, TError>;
-    
-    public sealed record Error(PokemonError error): Result<TData, TError>;
+    NetworkTimeout,
+    NotFound,
+    Unknown,
+    AuthenticationFailed,
+    NetworkError,
+    InvalidInput,
+    UnknownError
 }
+
+public record Result<TData, TError>
+{
+    public Result()
+    {
+        
+    }
+    public sealed record Success(TData Data): Result<TData, TError>
+    {
+        public Pokemon data;
+    }
+
+    public sealed record Error(TError error): Result<TData, TError>;
+};
